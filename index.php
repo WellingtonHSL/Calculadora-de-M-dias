@@ -2,6 +2,7 @@
 session_start();
     $media_final = $_SESSION['media_final'] ?? '0';
     $frase = $_SESSION['frase'] ?? '';
+    $conceito = $_SESSION['conceito'] ?? '';
     $media_final_rec = $_SESSION['media_final_rec'] ?? '0';
     $frase_rec = $_SESSION['frase_rec'] ?? '';
 ?>
@@ -97,8 +98,9 @@ main {
             </form>
             <br>
             <h3>Média Final: <?php echo htmlspecialchars($media_final)?></h3>
+            <p>Conceito: <?php echo htmlspecialchars($conceito)?></p>
             <p><?php echo htmlspecialchars($frase)?></p>
-        </div>    
+        </div>
 
         <?php
         if ($media_final >= 4 && $media_final < 7){
